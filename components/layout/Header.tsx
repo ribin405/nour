@@ -69,14 +69,14 @@ export function Header() {
       </div>
 
       {/* Main header row */}
-      <div className="h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md">
-        <Link href="/" className="flex items-center gap-space-sm">
+      <div className="h-16 sm:h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-sm sm:gap-space-md">
+        <Link href="/" className="flex items-center gap-space-sm shrink-0">
           <Image
             src="/images/nour-academy-logo.png"
             alt="Noor Islamic Academy Logo"
             width={898}
             height={478}
-            className="h-14 w-auto object-contain"
+            className="h-10 sm:h-14 w-auto object-contain"
             priority
           />
         </Link>
@@ -102,7 +102,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-space-sm">
+        <div className="flex items-center gap-space-xs sm:gap-space-sm shrink-0">
           <a
             className="hidden sm:inline-flex items-center gap-space-2xs bg-surface-container-low text-primary px-space-sm py-space-xs rounded-xl font-label-md text-label-md hover:bg-surface-container-high transition-colors"
             href={getWhatsAppLink(whatsappMessages.general)}
@@ -113,16 +113,17 @@ export function Header() {
             <span>WhatsApp Us</span>
           </a>
           <Link
-            className="inline-flex items-center gap-space-2xs bg-secondary text-on-secondary hover:bg-on-secondary-container px-space-md py-space-xs rounded-xl font-label-md text-label-md shadow-sm transition-all"
+            className="inline-flex items-center gap-space-2xs bg-secondary text-on-secondary hover:bg-on-secondary-container px-space-sm sm:px-space-md py-space-xs rounded-xl font-label-sm sm:font-label-md text-label-sm sm:text-label-md shadow-sm transition-all whitespace-nowrap"
             href="/free-trial"
           >
             <span className="material-symbols-outlined text-body-sm">calendar_month</span>
-            <span>Book a Free Trial</span>
+            <span className="hidden sm:inline">Book a Free Trial</span>
+            <span className="sm:hidden">Book Trial</span>
           </Link>
           <button
             aria-label="Open menu"
             onClick={() => setDrawerOpen(true)}
-            className="xl:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-low transition-colors"
+            className="xl:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-low transition-colors shrink-0"
           >
             <span className="material-symbols-outlined text-primary">menu</span>
           </button>

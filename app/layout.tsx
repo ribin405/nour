@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-surface font-body-md text-on-surface antialiased">
         <Header />
-        <main className="w-full pt-20 sm:pt-[7rem] bg-surface min-h-screen">
+        <main className="w-full pt-16 sm:pt-[7rem] bg-surface min-h-screen">
           <div className="flex flex-col w-full overflow-hidden">{children}</div>
         </main>
         <Footer />
